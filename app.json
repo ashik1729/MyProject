@@ -3,7 +3,11 @@
     "name": "MyProject",
     "slug": "MyProject",
     "version": "1.0.0",
+    "sdkVersion": "41.0.0",
     "orientation": "portrait",
+    "platforms": [
+      "android"
+    ],
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -15,6 +19,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.ashik.ali",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -22,6 +27,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "66bd40cc-1e03-4ad3-b978-4063da045923"
+      }
     }
   }
 }
