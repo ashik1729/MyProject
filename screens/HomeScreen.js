@@ -1,34 +1,36 @@
-// HomeScreen.js
-
+// Import necessary components and packages
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { View, ScrollView, StyleSheet, Text, SafeAreaView } from "react-native";
-import Header from "./../components/Header";
+import { StatusBar } from "expo-status-bar"; // Import StatusBar component from expo-status-bar
+import { View, ScrollView, StyleSheet, Text, SafeAreaView } from "react-native"; // Import necessary components from react-native
+import Header from "./../components/Header"; // Import Header component
+import Footer from "./../components/Footer"; // Import Footer component
 
-import BlockComponentWrapper from "./../components/BlockComponentWrapper";
+import BlockComponentWrapper from "./../components/BlockComponentWrapper"; // Import BlockComponentWrapper component
+
+// Define the HomeScreen component
 const HomeScreen = ({ navigation }) => {
   return (
-    // <View style={styles.container}>
-    //   <Text>Welcome to Home Screen!</Text>
-    // </View>
+    // SafeAreaView ensures that the content doesn't overlap with device-specific elements like the status bar
     <SafeAreaView style={styles.container}>
-      {/* <ThumbnailBlock /> */}
+      {/* Header component */}
       <Header />
+      {/* ScrollView for scrolling content */}
       <ScrollView>
-          <BlockComponentWrapper />
-        {/* <Text>Ashik</Text> */}
+        {/* BlockComponentWrapper component */}
+        <BlockComponentWrapper />
       </ScrollView>
-      {/* <Footer navigation={navigation} /> */}
+      {/* Footer component */}
+      <Footer navigation={navigation} />
     </SafeAreaView>
   );
 };
 
+// Styles for the HomeScreen component
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center",
+    flex: 1 // Take up the entire space of the parent container
   },
 });
 
+// Export the HomeScreen component as the default export
 export default HomeScreen;

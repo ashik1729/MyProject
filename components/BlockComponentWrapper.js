@@ -1,45 +1,40 @@
-// BlockComponentWrapper.js
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   View,
-  Text,
-  FlatList,
-  ActivityIndicator,
   StyleSheet,
 } from "react-native";
-// import axios from "axios";
-import { Provider } from 'react-redux';
 import BlockComponent from "./BlockComponent";
 
+// Component responsible for rendering BlockComponent within a wrapper
 const BlockComponentWrapper = () => {
-  const handleViewPress = () => {
-    console.log("View Pressed!");
-  };
+  // State to manage loading state
   const [isLoading, setLoading] = useState(true);
+
+  // State to manage data
   const [data, setData] = useState([]);
 
   return (
     <View style={styles.pageContainer}>
+      {/* Container for BlockComponent */}
       <View style={styles.rowContainer}>
-          <BlockComponent
-            // delivery={item.brand}
-            // onPress={handleViewPress}
-          />
+        {/* Render BlockComponent */}
+        <BlockComponent />
       </View>
     </View>
   );
 };
 
+// Styles for BlockComponentWrapper
 const styles = StyleSheet.create({
   pageContainer: {
     flex: 1,
     padding: 2,
-    backgroundColor: "#fff",
+    backgroundColor: "#fff", // Background color
   },
   rowContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 16,
+    flexDirection: "row", // Layout direction
+    justifyContent: "space-between", // Alignment of items
+    marginBottom: 16, // Margin bottom
   },
 });
 
